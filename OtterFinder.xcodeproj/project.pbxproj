@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22224A5E16F5315E00F76FC7 /* TPCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22224A5C16F5315E00F76FC7 /* TPCollectionViewController.m */; };
+		22224A5F16F5315E00F76FC7 /* TPCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22224A5D16F5315E00F76FC7 /* TPCollectionView.xib */; };
+		22224A6316F533B500F76FC7 /* TPCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22224A6216F533B500F76FC7 /* TPCollectionViewCell.m */; };
+		22224A6516F533C700F76FC7 /* TPCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22224A6416F533C700F76FC7 /* TPCollectionViewCell.xib */; };
 		2227986116F4AA1700C60DC5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2227986016F4AA1700C60DC5 /* UIKit.framework */; };
 		2227986316F4AA1700C60DC5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2227986216F4AA1700C60DC5 /* Foundation.framework */; };
 		2227986516F4AA1700C60DC5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2227986416F4AA1700C60DC5 /* CoreGraphics.framework */; };
@@ -54,6 +58,12 @@
 
 /* Begin PBXFileReference section */
 		001A079AA05D4582B30DB802 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		22224A5B16F5315E00F76FC7 /* TPCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPCollectionViewController.h; sourceTree = "<group>"; };
+		22224A5C16F5315E00F76FC7 /* TPCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPCollectionViewController.m; sourceTree = "<group>"; };
+		22224A5D16F5315E00F76FC7 /* TPCollectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPCollectionView.xib; sourceTree = "<group>"; };
+		22224A6116F533B500F76FC7 /* TPCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPCollectionViewCell.h; sourceTree = "<group>"; };
+		22224A6216F533B500F76FC7 /* TPCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPCollectionViewCell.m; sourceTree = "<group>"; };
+		22224A6416F533C700F76FC7 /* TPCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPCollectionViewCell.xib; sourceTree = "<group>"; };
 		2227985D16F4AA1700C60DC5 /* OtterFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OtterFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2227986016F4AA1700C60DC5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2227986216F4AA1700C60DC5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -131,6 +141,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22224A5A16F5313900F76FC7 /* Collection view */ = {
+			isa = PBXGroup;
+			children = (
+				22224A6016F5339700F76FC7 /* Cells */,
+				22224A5B16F5315E00F76FC7 /* TPCollectionViewController.h */,
+				22224A5C16F5315E00F76FC7 /* TPCollectionViewController.m */,
+				22224A5D16F5315E00F76FC7 /* TPCollectionView.xib */,
+			);
+			name = "Collection view";
+			sourceTree = "<group>";
+		};
+		22224A6016F5339700F76FC7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				22224A6116F533B500F76FC7 /* TPCollectionViewCell.h */,
+				22224A6216F533B500F76FC7 /* TPCollectionViewCell.m */,
+				22224A6416F533C700F76FC7 /* TPCollectionViewCell.xib */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 		2227985416F4AA1700C60DC5 = {
 			isa = PBXGroup;
 			children = (
@@ -216,6 +247,7 @@
 		2227989B16F4AA4200C60DC5 /* Front end */ = {
 			isa = PBXGroup;
 			children = (
+				22224A5A16F5313900F76FC7 /* Collection view */,
 				222798D716F4EDF500C60DC5 /* Detail overlay */,
 				222798CE16F4DC1300C60DC5 /* Annotations */,
 				222798A716F4B06800C60DC5 /* Main screen */,
@@ -424,6 +456,8 @@
 				222798D316F4DFAB00C60DC5 /* otter.png in Resources */,
 				222798D916F4EE1100C60DC5 /* DetailOverlay.xib in Resources */,
 				222798DB16F50A2F00C60DC5 /* TPMainView~iPad.xib in Resources */,
+				22224A5F16F5315E00F76FC7 /* TPCollectionView.xib in Resources */,
+				22224A6516F533C700F76FC7 /* TPCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,6 +528,8 @@
 				222798C516F4BCC400C60DC5 /* OtterClient.m in Sources */,
 				222798D116F4DC2900C60DC5 /* OtterPin.m in Sources */,
 				222798D616F4EDEF00C60DC5 /* TPDetailOverlay.m in Sources */,
+				22224A5E16F5315E00F76FC7 /* TPCollectionViewController.m in Sources */,
+				22224A6316F533B500F76FC7 /* TPCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

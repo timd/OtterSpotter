@@ -7,6 +7,7 @@
 //
 
 #import "TPMainViewController.h"
+#import "TPCollectionViewController.h"
 #import "TPLocator.h"
 #import "OtterClient.h"
 #import "TPDetailOverlay.h"
@@ -17,6 +18,8 @@
 #import "OtterPin.h"
 
 @interface TPMainViewController ()
+
+@property (nonatomic, strong) NSArray *ottersArray;
 
 @property (nonatomic, strong) CLLocationManager *locManager;
 @property (nonatomic, strong) OtterClient *otterClient;
@@ -54,8 +57,8 @@
 
     [self didTapLocateButton:nil];
     
-    
 }
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -228,6 +231,16 @@
     
 }
 
+-(IBAction)didTapCollectionViewButton:(id)sender {
+    
+    TPCollectionViewController *collectionVC = [[TPCollectionViewController alloc] initWithNibName:@"TPCollectionView" bundle:nil];
+    [collectionVC setTitle:@"Ottr"];
+    [collectionVC setOtterArray:self.ottersArray];
+    [self.navigationController setNavigationBarHidden:NO];
+    [self.navigationController pushViewController:collectionVC animated:YES];
+    
+}
+
 - (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated {
     NSLog(@"Region did change");
     
@@ -246,9 +259,9 @@
 -(void)plotOtterDataFromJsonDictionary:(NSDictionary *)jsonDictionary {
 
     // Grab otters array
-    NSArray *otters = [jsonDictionary objectForKey:@"otters"];
+    self.ottersArray = [jsonDictionary objectForKey:@"otters"];
     
-    for (NSDictionary *otterDict in otters) {
+    for (NSDictionary *otterDict in self.ottersArray) {
         
         NSString *gridRefLatString = [otterDict objectForKey:@"lat"];
         NSString *gridRefLonString = [otterDict objectForKey:@"long"];

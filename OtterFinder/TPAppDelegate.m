@@ -25,10 +25,9 @@
         mainVC = [[TPMainViewController alloc] initWithNibName:@"TPMainView~iPhone" bundle:nil];
     }
     
-    [mainVC setTitle:@"Otters"];
+    [mainVC setTitle:@"Ottr"];
 
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:mainVC];
-    [navController setNavigationBarHidden:YES];
     
     self.window.rootViewController = navController;
     [self.window makeKeyAndVisible];
