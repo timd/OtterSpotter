@@ -117,11 +117,9 @@
 		2227986616F4AA1700C60DC5 /* OtterFinder */ = {
 			isa = PBXGroup;
 			children = (
-				2227986F16F4AA1700C60DC5 /* TPAppDelegate.h */,
-				2227987016F4AA1700C60DC5 /* TPAppDelegate.m */,
-				2227987816F4AA1700C60DC5 /* TPViewController.h */,
-				2227987916F4AA1700C60DC5 /* TPViewController.m */,
-				2227987B16F4AA1700C60DC5 /* TPViewController.xib */,
+				2227989D16F4AA4F00C60DC5 /* App delegate */,
+				2227989C16F4AA4800C60DC5 /* Back end */,
+				2227989B16F4AA4200C60DC5 /* Front end */,
 				2227986716F4AA1700C60DC5 /* Supporting Files */,
 			);
 			path = OtterFinder;
@@ -158,6 +156,32 @@
 				2227988D16F4AA1800C60DC5 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2227989B16F4AA4200C60DC5 /* Front end */ = {
+			isa = PBXGroup;
+			children = (
+				2227987816F4AA1700C60DC5 /* TPViewController.h */,
+				2227987916F4AA1700C60DC5 /* TPViewController.m */,
+				2227987B16F4AA1700C60DC5 /* TPViewController.xib */,
+			);
+			name = "Front end";
+			sourceTree = "<group>";
+		};
+		2227989C16F4AA4800C60DC5 /* Back end */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Back end";
+			sourceTree = "<group>";
+		};
+		2227989D16F4AA4F00C60DC5 /* App delegate */ = {
+			isa = PBXGroup;
+			children = (
+				2227986F16F4AA1700C60DC5 /* TPAppDelegate.h */,
+				2227987016F4AA1700C60DC5 /* TPAppDelegate.m */,
+			);
+			name = "App delegate";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
