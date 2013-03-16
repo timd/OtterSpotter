@@ -6,6 +6,6 @@
 //  Copyright (c) 2013 Charismatic Megafauna Ltd. All rights reserved.
 //
 
-#define kBaseApiUrl @"http://damp-sierra-3977.herokuapp.com"
+#define kBaseApiUrl @"http://otterspotter.herokuapp.com"
 
-#define kStubNetworkCalls YES
+#define kStubNetworkCalls NO

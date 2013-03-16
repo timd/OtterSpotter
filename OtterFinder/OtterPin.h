@@ -14,4 +14,7 @@
 - (id)initWithCoordinates:(CLLocationCoordinate2D)location
                 placeName:(NSString *)placeName
               description:(NSString *)description;
+
+@property (nonatomic, strong) NSDictionary *otterDictionary;
+
 @end

@@ -19,8 +19,9 @@
     
     TPMainViewController *mainVC = [[TPMainViewController alloc] initWithNibName:@"TPMainView" bundle:nil];
     [mainVC setTitle:@"Otters"];
-    
+
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:mainVC];
+    [navController setNavigationBarHidden:YES];
     
     self.window.rootViewController = navController;
     [self.window makeKeyAndVisible];
