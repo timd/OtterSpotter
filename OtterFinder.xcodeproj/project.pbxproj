@@ -23,7 +23,7 @@
 		2227989216F4AA1800C60DC5 /* OtterFinderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2227989116F4AA1800C60DC5 /* OtterFinderTests.m */; };
 		222798A116F4AE9100C60DC5 /* TPOtterParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 222798A016F4AE9100C60DC5 /* TPOtterParser.m */; };
 		222798AB16F4B08500C60DC5 /* TPMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 222798A916F4B08500C60DC5 /* TPMainViewController.m */; };
-		222798AC16F4B08500C60DC5 /* TPMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 222798AA16F4B08500C60DC5 /* TPMainView.xib */; };
+		222798AC16F4B08500C60DC5 /* TPMainView~iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 222798AA16F4B08500C60DC5 /* TPMainView~iPhone.xib */; };
 		222798B116F4B17200C60DC5 /* TPLocator.m in Sources */ = {isa = PBXBuildFile; fileRef = 222798B016F4B17200C60DC5 /* TPLocator.m */; };
 		222798B316F4B20A00C60DC5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 222798B216F4B20A00C60DC5 /* CoreLocation.framework */; };
 		222798B516F4B3D500C60DC5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 222798B416F4B3D500C60DC5 /* MapKit.framework */; };
@@ -37,6 +37,7 @@
 		222798D316F4DFAB00C60DC5 /* otter.png in Resources */ = {isa = PBXBuildFile; fileRef = 222798D216F4DFAB00C60DC5 /* otter.png */; };
 		222798D616F4EDEF00C60DC5 /* TPDetailOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 222798D516F4EDEF00C60DC5 /* TPDetailOverlay.m */; };
 		222798D916F4EE1100C60DC5 /* DetailOverlay.xib in Resources */ = {isa = PBXBuildFile; fileRef = 222798D816F4EE1100C60DC5 /* DetailOverlay.xib */; };
+		222798DB16F50A2F00C60DC5 /* TPMainView~iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 222798DA16F50A2F00C60DC5 /* TPMainView~iPad.xib */; };
 		B4038F7243184DD9A20A3AAC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 77D5BB90111D40F59FBBCBCD /* libPods.a */; };
 		EAB1DED9702D493F871C9BA9 /* libPods-OtterFinderTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C22A454EED2046ABB245B294 /* libPods-OtterFinderTests.a */; };
 /* End PBXBuildFile section */
@@ -76,7 +77,7 @@
 		222798A016F4AE9100C60DC5 /* TPOtterParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOtterParser.m; sourceTree = "<group>"; };
 		222798A816F4B08500C60DC5 /* TPMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPMainViewController.h; sourceTree = "<group>"; };
 		222798A916F4B08500C60DC5 /* TPMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPMainViewController.m; sourceTree = "<group>"; };
-		222798AA16F4B08500C60DC5 /* TPMainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPMainView.xib; sourceTree = "<group>"; };
+		222798AA16F4B08500C60DC5 /* TPMainView~iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "TPMainView~iPhone.xib"; sourceTree = "<group>"; };
 		222798AF16F4B17200C60DC5 /* TPLocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPLocator.h; sourceTree = "<group>"; };
 		222798B016F4B17200C60DC5 /* TPLocator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPLocator.m; sourceTree = "<group>"; };
 		222798B216F4B20A00C60DC5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -96,6 +97,7 @@
 		222798D416F4EDEF00C60DC5 /* TPDetailOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPDetailOverlay.h; sourceTree = "<group>"; };
 		222798D516F4EDEF00C60DC5 /* TPDetailOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPDetailOverlay.m; sourceTree = "<group>"; };
 		222798D816F4EE1100C60DC5 /* DetailOverlay.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailOverlay.xib; sourceTree = "<group>"; };
+		222798DA16F50A2F00C60DC5 /* TPMainView~iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "TPMainView~iPad.xib"; sourceTree = "<group>"; };
 		4792C8ACA7D34B37BFEC0053 /* Pods-OtterFinderTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OtterFinderTests.xcconfig"; path = "Pods/Pods-OtterFinderTests.xcconfig"; sourceTree = SOURCE_ROOT; };
 		77D5BB90111D40F59FBBCBCD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C22A454EED2046ABB245B294 /* libPods-OtterFinderTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OtterFinderTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -264,7 +266,8 @@
 			children = (
 				222798A816F4B08500C60DC5 /* TPMainViewController.h */,
 				222798A916F4B08500C60DC5 /* TPMainViewController.m */,
-				222798AA16F4B08500C60DC5 /* TPMainView.xib */,
+				222798AA16F4B08500C60DC5 /* TPMainView~iPhone.xib */,
+				222798DA16F50A2F00C60DC5 /* TPMainView~iPad.xib */,
 			);
 			name = "Main screen";
 			sourceTree = "<group>";
@@ -412,7 +415,7 @@
 				2227987316F4AA1700C60DC5 /* Default.png in Resources */,
 				2227987516F4AA1700C60DC5 /* Default@2x.png in Resources */,
 				2227987716F4AA1700C60DC5 /* Default-568h@2x.png in Resources */,
-				222798AC16F4B08500C60DC5 /* TPMainView.xib in Resources */,
+				222798AC16F4B08500C60DC5 /* TPMainView~iPhone.xib in Resources */,
 				222798BA16F4B75700C60DC5 /* marker.png in Resources */,
 				222798BB16F4B75700C60DC5 /* marker@2x.png in Resources */,
 				222798BE16F4B7CD00C60DC5 /* radar.png in Resources */,
@@ -420,6 +423,7 @@
 				222798CC16F4D11800C60DC5 /* test.json in Resources */,
 				222798D316F4DFAB00C60DC5 /* otter.png in Resources */,
 				222798D916F4EE1100C60DC5 /* DetailOverlay.xib in Resources */,
+				222798DB16F50A2F00C60DC5 /* TPMainView~iPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -591,10 +595,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 001A079AA05D4582B30DB802 /* Pods.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tim Duckett (KM4NF2P463)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OtterFinder/OtterFinder-Prefix.pch";
 				INFOPLIST_FILE = "OtterFinder/OtterFinder-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "1D884C2F-20F3-44F1-B371-F8A59B28DD8A";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$inherited/**";
 				WRAPPER_EXTENSION = app;
 			};
@@ -607,7 +615,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OtterFinder/OtterFinder-Prefix.pch";
 				INFOPLIST_FILE = "OtterFinder/OtterFinder-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$inherited/**";
 				WRAPPER_EXTENSION = app;
 			};

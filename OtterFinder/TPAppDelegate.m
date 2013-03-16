@@ -17,7 +17,14 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
-    TPMainViewController *mainVC = [[TPMainViewController alloc] initWithNibName:@"TPMainView" bundle:nil];
+    TPMainViewController *mainVC = nil;
+    
+    if ( UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ) {
+        mainVC = [[TPMainViewController alloc] initWithNibName:@"TPMainView~iPad" bundle:nil];
+    } else {
+        mainVC = [[TPMainViewController alloc] initWithNibName:@"TPMainView~iPhone" bundle:nil];
+    }
+    
     [mainVC setTitle:@"Otters"];
 
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:mainVC];
