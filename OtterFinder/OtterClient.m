@@ -70,12 +70,12 @@
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         // SUCCESS
         NSLog(@"Received %@", [JSON class]);
-        NSLog(@"Success in OtterClient: %@", JSON);
         [self.delegate plotOtterDataFromJsonDictionary:JSON];
         
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
         // FAILURE
         NSLog(@"Error in OtterClient: %@", error);
+        [self.delegate handleOtterDataErrorWithError:error];
     }];
     
     [operation setShouldExecuteAsBackgroundTaskWithExpirationHandler:nil];

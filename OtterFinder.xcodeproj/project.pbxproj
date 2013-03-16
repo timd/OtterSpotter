@@ -33,6 +33,8 @@
 		222798BF16F4B7CD00C60DC5 /* radar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 222798BD16F4B7CD00C60DC5 /* radar@2x.png */; };
 		222798C516F4BCC400C60DC5 /* OtterClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 222798C416F4BCC400C60DC5 /* OtterClient.m */; };
 		222798CC16F4D11800C60DC5 /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 222798CB16F4D11800C60DC5 /* test.json */; };
+		222798D116F4DC2900C60DC5 /* OtterPin.m in Sources */ = {isa = PBXBuildFile; fileRef = 222798D016F4DC2900C60DC5 /* OtterPin.m */; };
+		222798D316F4DFAB00C60DC5 /* otter.png in Resources */ = {isa = PBXBuildFile; fileRef = 222798D216F4DFAB00C60DC5 /* otter.png */; };
 		B4038F7243184DD9A20A3AAC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 77D5BB90111D40F59FBBCBCD /* libPods.a */; };
 		EAB1DED9702D493F871C9BA9 /* libPods-OtterFinderTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C22A454EED2046ABB245B294 /* libPods-OtterFinderTests.a */; };
 /* End PBXBuildFile section */
@@ -86,6 +88,9 @@
 		222798C716F4BEF400C60DC5 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		222798CB16F4D11800C60DC5 /* test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
 		222798CD16F4D5AA00C60DC5 /* OtterClientProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtterClientProtocol.h; sourceTree = "<group>"; };
+		222798CF16F4DC2900C60DC5 /* OtterPin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtterPin.h; sourceTree = "<group>"; };
+		222798D016F4DC2900C60DC5 /* OtterPin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtterPin.m; sourceTree = "<group>"; };
+		222798D216F4DFAB00C60DC5 /* otter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = otter.png; sourceTree = "<group>"; };
 		4792C8ACA7D34B37BFEC0053 /* Pods-OtterFinderTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OtterFinderTests.xcconfig"; path = "Pods/Pods-OtterFinderTests.xcconfig"; sourceTree = SOURCE_ROOT; };
 		77D5BB90111D40F59FBBCBCD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C22A454EED2046ABB245B294 /* libPods-OtterFinderTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OtterFinderTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -204,6 +209,7 @@
 		2227989B16F4AA4200C60DC5 /* Front end */ = {
 			isa = PBXGroup;
 			children = (
+				222798CE16F4DC1300C60DC5 /* Annotations */,
 				222798A716F4B06800C60DC5 /* Main screen */,
 			);
 			name = "Front end";
@@ -278,6 +284,7 @@
 		222798B716F4B75700C60DC5 /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				222798D216F4DFAB00C60DC5 /* otter.png */,
 				222798BC16F4B7CD00C60DC5 /* radar.png */,
 				222798BD16F4B7CD00C60DC5 /* radar@2x.png */,
 				222798B816F4B75700C60DC5 /* marker.png */,
@@ -300,6 +307,15 @@
 				222798CB16F4D11800C60DC5 /* test.json */,
 			);
 			name = JSON;
+			sourceTree = "<group>";
+		};
+		222798CE16F4DC1300C60DC5 /* Annotations */ = {
+			isa = PBXGroup;
+			children = (
+				222798CF16F4DC2900C60DC5 /* OtterPin.h */,
+				222798D016F4DC2900C60DC5 /* OtterPin.m */,
+			);
+			name = Annotations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -386,6 +402,7 @@
 				222798BE16F4B7CD00C60DC5 /* radar.png in Resources */,
 				222798BF16F4B7CD00C60DC5 /* radar@2x.png in Resources */,
 				222798CC16F4D11800C60DC5 /* test.json in Resources */,
+				222798D316F4DFAB00C60DC5 /* otter.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +471,7 @@
 				222798AB16F4B08500C60DC5 /* TPMainViewController.m in Sources */,
 				222798B116F4B17200C60DC5 /* TPLocator.m in Sources */,
 				222798C516F4BCC400C60DC5 /* OtterClient.m in Sources */,
+				222798D116F4DC2900C60DC5 /* OtterPin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

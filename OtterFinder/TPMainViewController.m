@@ -10,6 +10,8 @@
 #import "TPLocator.h"
 #import "OtterClient.h"
 
+#import "OtterPin.h"
+
 @interface TPMainViewController ()
 
 @property (nonatomic, strong) CLLocationManager *locManager;
@@ -64,6 +66,30 @@
 }
 
 #pragma mark -
+#pragma mark MKMapView delegate methods
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView
+            viewForAnnotation:(id <MKAnnotation>)annotation
+{
+    if ([annotation isKindOfClass:[MKUserLocation class]])
+    {
+        return nil;
+    }
+    
+    static NSString* myIdentifier = @"myIdentifier";
+    MKAnnotationView* pinView = (MKAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:myIdentifier];
+    
+    if (!pinView)
+    {
+        pinView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:myIdentifier];
+        pinView.image = [UIImage imageNamed:@"otter"];
+        //pinView.pinColor = MKPinAnnotationColorRed;
+        //pinView.animatesDrop = YES;
+    }
+    return pinView;
+}
+
+#pragma mark -
 #pragma mark Interaction methods
 
 - (IBAction)didTapLocateButton:(id)sender {
@@ -108,12 +134,32 @@
 
 -(void)plotOtterDataFromJsonDictionary:(NSDictionary *)jsonDictionary {
 
-    NSLog(@"jsonDictionary = %@", jsonDictionary);
+    // Grab otters array
+    NSArray *otters = [jsonDictionary objectForKey:@"otters"];
+    
+    for (NSDictionary *otterDict in otters) {
+        
+        NSString *gridRefLatString = [otterDict objectForKey:@"gridRefLat"];
+        NSString *gridRefLonString = [otterDict objectForKey:@"gridRefLon"];
+        
+        double gridRefLat = [gridRefLatString doubleValue];
+        double gridRefLon = [gridRefLonString doubleValue];
+        
+        CLLocationCoordinate2D coord;
+        coord.latitude = (CLLocationDegrees)gridRefLat;
+        coord.longitude = (CLLocationDegrees)gridRefLon;
+        
+        NSLog(@"Otter: %f , %f", coord.latitude, coord.longitude);
+        
+        OtterPin *otterPin = [[OtterPin alloc] initWithCoordinates:coord placeName:@"foo" description:@"bar"];
+        [self.mapView addAnnotation:otterPin];
+        
+    }
 
 }
 
 -(void)handleOtterDataErrorWithError:(NSError *)error {
-    NSLog("Otter error receieved: %@", error);
+    NSLog(@"Otter error receieved: %@", error);
 }
 
 @end

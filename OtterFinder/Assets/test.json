@@ -6,6 +6,8 @@
         "county" : "Somerset",
         "alt" : "30",
         "gridRef" : "ST553443",
+        "gridRefLat" : "51.196159",
+        "gridRefLon" : "-2.641095",
         "gpsGridRefStart" : "ST 55340 44385",
         "dateV1" : "01/09/1977",
         "dateV2" : "17/10/1984",
@@ -18,10 +20,14 @@
         "v4" : "N",
         "v5" : "P",
         "gpsGridRefOtter" : "ST 55887 44664",
+        "gpsGridRefOtterLat" : "12.23456",
+        "gpsGridRefOtterLon" : "12.23456",
         "leap" : "107",
         "minkPresent" : "P",
         "easting" : "355300",
-        "northing" : "144300"
+        "eastingLat" : "1.23456",
+        "northing" : "144300",
+        "northingLon" : "1.23456"
     },
     {
         "siteNo" : "0001",
@@ -30,6 +36,8 @@
         "county" : "Somerset",
         "alt" : "30",
         "gridRef" : "ST553443",
+        "gridRefLat" : "50.826060",
+        "gridRefLon" : "-1.024553",
         "gpsGridRefStart" : "ST 55340 44385",
         "dateV1" : "01/09/1977",
         "dateV2" : "17/10/1984",
@@ -42,11 +50,14 @@
         "v4" : "N",
         "v5" : "P",
         "gpsGridRefOtter" : "ST 55887 44664",
+        "gpsGridRefOtterLat" : "12.23456",
+        "gpsGridRefOtterLon" : "12.23456",
         "leap" : "107",
         "minkPresent" : "P",
         "easting" : "355300",
-        "northing" : "144300"
-    },
+        "eastingLat" : "1.23456",
+        "northing" : "144300",
+        "northingLon" : "1.23456"    },
     {
         "siteNo" : "0001",
         "region" : "WE",
@@ -54,6 +65,8 @@
         "county" : "Somerset",
         "alt" : "30",
         "gridRef" : "ST553443",
+        "gridRefLat" : "51.187765",
+        "gridRefLon" : "-2.693921",
         "gpsGridRefStart" : "ST 55340 44385",
         "dateV1" : "01/09/1977",
         "dateV2" : "17/10/1984",
@@ -66,10 +79,14 @@
         "v4" : "N",
         "v5" : "P",
         "gpsGridRefOtter" : "ST 55887 44664",
+        "gpsGridRefOtterLat" : "12.23456",
+        "gpsGridRefOtterLon" : "12.23456",
         "leap" : "107",
         "minkPresent" : "P",
         "easting" : "355300",
-        "northing" : "144300"
+        "eastingLat" : "1.23456",
+        "northing" : "144300",
+        "northingLon" : "1.23456"
     }
     ]
 }
