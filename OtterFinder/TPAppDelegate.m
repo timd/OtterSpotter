@@ -8,7 +8,7 @@
 
 #import "TPAppDelegate.h"
 
-#import "TPViewController.h"
+#import "TPMainViewController.h"
 
 @implementation TPAppDelegate
 
@@ -16,8 +16,13 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.viewController = [[TPViewController alloc] initWithNibName:@"TPViewController" bundle:nil];
-    self.window.rootViewController = self.viewController;
+    
+    TPMainViewController *mainVC = [[TPMainViewController alloc] initWithNibName:@"TPMainView" bundle:nil];
+    [mainVC setTitle:@"Otters"];
+    
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:mainVC];
+    
+    self.window.rootViewController = navController;
     [self.window makeKeyAndVisible];
     return YES;
 }
