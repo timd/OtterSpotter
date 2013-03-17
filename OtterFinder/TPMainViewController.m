@@ -181,11 +181,12 @@
         }completion:^(BOOL finished){
             if (finished) {
                 [UIView animateWithDuration:0.05 animations:^{
-                    aV.transform = CGAffineTransformMakeScale(1.0, 0.8);
+                    
+                    aV.transform = CGAffineTransformMakeScale(1.0, 0.5);
                     
                 }completion:^(BOOL finished){
                     if (finished) {
-                        [UIView animateWithDuration:0.1 animations:^{
+                        [UIView animateWithDuration:0.2 animations:^{
                             aV.transform = CGAffineTransformIdentity;
                         }];
                     }

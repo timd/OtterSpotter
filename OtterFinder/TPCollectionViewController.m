@@ -92,6 +92,10 @@
         cell.imageView.alpha = 1.0f;
     }
     
+    if ([[otterDictionary objectForKey:@"minkPresent"] isEqualToString:@"Y"]) {
+        [cell.imageView setImage:[UIImage imageNamed:@"tombstone"]];
+    }
+    
     return cell;
 }
 

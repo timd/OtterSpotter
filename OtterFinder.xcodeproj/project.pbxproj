@@ -46,6 +46,8 @@
 		22B1532216F5E3A9003A88A3 /* location.png in Resources */ = {isa = PBXBuildFile; fileRef = 22B1532016F5E3A9003A88A3 /* location.png */; };
 		22B1532316F5E3A9003A88A3 /* location@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22B1532116F5E3A9003A88A3 /* location@2x.png */; };
 		22B1532516F5EEF5003A88A3 /* tombstone.png in Resources */ = {isa = PBXBuildFile; fileRef = 22B1532416F5EEF5003A88A3 /* tombstone.png */; };
+		22B1532716F6033C003A88A3 /* ottrIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 22B1532616F6033C003A88A3 /* ottrIcon.png */; };
+		22B1532916F6033F003A88A3 /* ottrIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22B1532816F6033F003A88A3 /* ottrIcon@2x.png */; };
 		B4038F7243184DD9A20A3AAC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 77D5BB90111D40F59FBBCBCD /* libPods.a */; };
 		EAB1DED9702D493F871C9BA9 /* libPods-OtterFinderTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C22A454EED2046ABB245B294 /* libPods-OtterFinderTests.a */; };
 /* End PBXBuildFile section */
@@ -116,6 +118,8 @@
 		22B1532016F5E3A9003A88A3 /* location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location.png; sourceTree = "<group>"; };
 		22B1532116F5E3A9003A88A3 /* location@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "location@2x.png"; sourceTree = "<group>"; };
 		22B1532416F5EEF5003A88A3 /* tombstone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tombstone.png; sourceTree = "<group>"; };
+		22B1532616F6033C003A88A3 /* ottrIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ottrIcon.png; sourceTree = "<group>"; };
+		22B1532816F6033F003A88A3 /* ottrIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ottrIcon@2x.png"; sourceTree = "<group>"; };
 		4792C8ACA7D34B37BFEC0053 /* Pods-OtterFinderTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OtterFinderTests.xcconfig"; path = "Pods/Pods-OtterFinderTests.xcconfig"; sourceTree = SOURCE_ROOT; };
 		77D5BB90111D40F59FBBCBCD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C22A454EED2046ABB245B294 /* libPods-OtterFinderTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OtterFinderTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -174,6 +178,8 @@
 		2227985416F4AA1700C60DC5 = {
 			isa = PBXGroup;
 			children = (
+				22B1532816F6033F003A88A3 /* ottrIcon@2x.png */,
+				22B1532616F6033C003A88A3 /* ottrIcon.png */,
 				2227986616F4AA1700C60DC5 /* OtterFinder */,
 				2227988A16F4AA1800C60DC5 /* OtterFinderTests */,
 				2227985F16F4AA1700C60DC5 /* Frameworks */,
@@ -474,6 +480,8 @@
 				22B1532216F5E3A9003A88A3 /* location.png in Resources */,
 				22B1532316F5E3A9003A88A3 /* location@2x.png in Resources */,
 				22B1532516F5EEF5003A88A3 /* tombstone.png in Resources */,
+				22B1532716F6033C003A88A3 /* ottrIcon.png in Resources */,
+				22B1532916F6033F003A88A3 /* ottrIcon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
