@@ -1,5 +1,5 @@
-OtterFinder
-===========
+OtterSpotter
+============
 
 Being a rapidly-developed geo-located aquatic mammal locator.
 
