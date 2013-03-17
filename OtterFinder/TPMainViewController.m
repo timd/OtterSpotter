@@ -101,7 +101,14 @@
     if (!otterPin)
     {
         otterPin = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:myIdentifier];
-        otterPin.image = [UIImage imageNamed:@"otter"];
+        
+        OtterPin *annot = (OtterPin *)otterPin.annotation;
+        
+        if ([[annot.otterDictionary objectForKey:@"minkPresent"] isEqualToString:@"N"]) {
+            otterPin.image = [UIImage imageNamed:@"otter"];
+        } else {
+            otterPin.image = [UIImage imageNamed:@"tombstone"];
+        }
 
     }
     return otterPin;
