@@ -43,6 +43,8 @@
 		222798D616F4EDEF00C60DC5 /* TPDetailOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 222798D516F4EDEF00C60DC5 /* TPDetailOverlay.m */; };
 		222798D916F4EE1100C60DC5 /* DetailOverlay.xib in Resources */ = {isa = PBXBuildFile; fileRef = 222798D816F4EE1100C60DC5 /* DetailOverlay.xib */; };
 		222798DB16F50A2F00C60DC5 /* TPMainView~iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 222798DA16F50A2F00C60DC5 /* TPMainView~iPad.xib */; };
+		22B1532216F5E3A9003A88A3 /* location.png in Resources */ = {isa = PBXBuildFile; fileRef = 22B1532016F5E3A9003A88A3 /* location.png */; };
+		22B1532316F5E3A9003A88A3 /* location@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22B1532116F5E3A9003A88A3 /* location@2x.png */; };
 		B4038F7243184DD9A20A3AAC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 77D5BB90111D40F59FBBCBCD /* libPods.a */; };
 		EAB1DED9702D493F871C9BA9 /* libPods-OtterFinderTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C22A454EED2046ABB245B294 /* libPods-OtterFinderTests.a */; };
 /* End PBXBuildFile section */
@@ -110,6 +112,8 @@
 		222798D516F4EDEF00C60DC5 /* TPDetailOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPDetailOverlay.m; sourceTree = "<group>"; };
 		222798D816F4EE1100C60DC5 /* DetailOverlay.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailOverlay.xib; sourceTree = "<group>"; };
 		222798DA16F50A2F00C60DC5 /* TPMainView~iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "TPMainView~iPad.xib"; sourceTree = "<group>"; };
+		22B1532016F5E3A9003A88A3 /* location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location.png; sourceTree = "<group>"; };
+		22B1532116F5E3A9003A88A3 /* location@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "location@2x.png"; sourceTree = "<group>"; };
 		4792C8ACA7D34B37BFEC0053 /* Pods-OtterFinderTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OtterFinderTests.xcconfig"; path = "Pods/Pods-OtterFinderTests.xcconfig"; sourceTree = SOURCE_ROOT; };
 		77D5BB90111D40F59FBBCBCD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C22A454EED2046ABB245B294 /* libPods-OtterFinderTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OtterFinderTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -328,6 +332,8 @@
 		222798B716F4B75700C60DC5 /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				22B1532016F5E3A9003A88A3 /* location.png */,
+				22B1532116F5E3A9003A88A3 /* location@2x.png */,
 				222798D216F4DFAB00C60DC5 /* otter.png */,
 				222798BC16F4B7CD00C60DC5 /* radar.png */,
 				222798BD16F4B7CD00C60DC5 /* radar@2x.png */,
@@ -462,6 +468,8 @@
 				22224A5F16F5315E00F76FC7 /* TPCollectionView~iPhone.xib in Resources */,
 				22224A6516F533C700F76FC7 /* TPCollectionViewCell~iPhone.xib in Resources */,
 				22224A6716F537B800F76FC7 /* TPCollectionView~iPad.xib in Resources */,
+				22B1532216F5E3A9003A88A3 /* location.png in Resources */,
+				22B1532316F5E3A9003A88A3 /* location@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

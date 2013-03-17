@@ -28,6 +28,7 @@
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 @property (nonatomic, strong) TPDetailOverlay *detailOverlay;
+@property (nonatomic, strong) CLLocation *currentLocation;
 
 @end
 
@@ -87,6 +88,13 @@
         return nil;
     }
     
+    if (![annotation respondsToSelector:@selector(otterDictionary)]) {
+            MKPinAnnotationView *pinAnnotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"current"];
+            pinAnnotationView.animatesDrop = YES;
+            pinAnnotationView.pinColor = MKPinAnnotationColorRed;
+            return pinAnnotationView;
+    }
+    
     static NSString* myIdentifier = @"myIdentifier";
     MKAnnotationView* otterPin = (MKAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:myIdentifier];
     
@@ -108,6 +116,43 @@
         if ([aV.annotation isKindOfClass:[MKUserLocation class]]) {
             continue;
         }
+        
+        if (![aV.annotation respondsToSelector:@selector(otterDictionary)]) {
+            continue;
+        }
+        
+        OtterPin *otterPin = (OtterPin *)aV.annotation;
+        NSDictionary *dict = otterPin.otterDictionary;
+        
+        // Base alpha = 0.5
+        aV.alpha = 0.0f;
+        
+        NSString *v1 = [dict objectForKey:@"v1"];
+        NSString *v2 = [dict objectForKey:@"v2"];
+        NSString *v3 = [dict objectForKey:@"v3"];
+        NSString *v4 = [dict objectForKey:@"v4"];
+        NSString *v5 = [dict objectForKey:@"v5"];
+        
+        if ([v1 isEqualToString:@"P"]) {
+            aV.alpha = 0.25f;
+        }
+
+        if ([v2 isEqualToString:@"P"]) {
+            aV.alpha = 0.35f;
+        }
+
+        if ([v3 isEqualToString:@"P"]) {
+            aV.alpha = 0.45f;
+        }
+
+        if ([v4 isEqualToString:@"P"]) {
+            aV.alpha = 0.5f;
+        }
+
+        if ([v5 isEqualToString:@"P"]) {
+            aV.alpha = 1.0f;
+        }
+
         
         // Check if current annotation is inside visible map rect, else go to next one
         MKMapPoint point =  MKMapPointForCoordinate(aV.annotation.coordinate);
@@ -154,6 +199,12 @@
         return;
     }
     
+    if (![view.annotation respondsToSelector:@selector(otterDictionary)]) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Otter spotted!" message:@"Otter spotted!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [alert show];
+        return;
+    }
+    
     OtterPin *otterPin = (OtterPin *)view.annotation;
     NSLog(@"otterpin = %@", otterPin.otterDictionary);
     
@@ -161,9 +212,8 @@
     self.detailOverlay.layer.cornerRadius = 5;
     self.detailOverlay.layer.masksToBounds = YES;
     
-    CGPoint p = [self.mapView convertCoordinate:view.annotation.coordinate toPointToView:self.mapView];
-    CGRect frame = CGRectMake(p.x, p.y, self.detailOverlay.frame.size.width, self.detailOverlay.frame.size.height);
-    self.detailOverlay.frame = frame;
+    CGPoint p = self.mapView.center;
+    self.detailOverlay.center = p;
     [self.detailOverlay setAlpha:0.0f];
     [self.detailOverlay.locationLabel setText:[otterPin.otterDictionary objectForKey:@"siteName"]];
 
@@ -177,6 +227,15 @@
 
 #pragma mark -
 #pragma mark Interaction methods
+- (IBAction)didDropPinButton:(id)sender {
+    
+    NSLog(@"didTapDropPinButton");
+    
+    MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
+    [annotation setCoordinate:[self.mapView centerCoordinate]];
+    [annotation setTitle:@"Title"]; //You can set the subtitle too
+    [self.mapView addAnnotation:annotation];
+}
 
 - (IBAction)didTapLocateButton:(id)sender {
     
@@ -196,7 +255,9 @@
         
         [self.mapView setRegion:region animated:YES];
         
-        self.isLocating = YES;
+        self.isLocating = NO;
+        
+        [self.locManager stopUpdatingLocation];
     }
     
 }
@@ -287,6 +348,8 @@
 
 -(void)handleOtterDataErrorWithError:(NSError *)error {
     NSLog(@"Otter error receieved: %@", error);
+    
+    [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
     
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Something went wrong" message:@"Something has otterly failed" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
     [alert show];

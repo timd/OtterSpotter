@@ -11,5 +11,6 @@
 @interface TPCollectionViewCell : UICollectionViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end

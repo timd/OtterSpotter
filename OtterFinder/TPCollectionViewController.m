@@ -63,6 +63,35 @@
     
     NSString *otterName = [otterDictionary objectForKey:@"siteName"];
     [cell.nameLabel setText:otterName];
+    
+    NSString *v1 = [otterDictionary objectForKey:@"v1"];
+    NSString *v2 = [otterDictionary objectForKey:@"v2"];
+    NSString *v3 = [otterDictionary objectForKey:@"v3"];
+    NSString *v4 = [otterDictionary objectForKey:@"v4"];
+    NSString *v5 = [otterDictionary objectForKey:@"v5"];
+    
+    cell.imageView.alpha = 0.0f;
+    
+    if ([v1 isEqualToString:@"P"]) {
+        cell.imageView.alpha = 0.25f;
+    }
+    
+    if ([v2 isEqualToString:@"P"]) {
+        cell.imageView.alpha = 0.35f;
+    }
+    
+    if ([v3 isEqualToString:@"P"]) {
+        cell.imageView.alpha = 0.45f;
+    }
+    
+    if ([v4 isEqualToString:@"P"]) {
+        cell.imageView.alpha = 0.5f;
+    }
+    
+    if ([v5 isEqualToString:@"P"]) {
+        cell.imageView.alpha = 1.0f;
+    }
+    
     return cell;
 }
 

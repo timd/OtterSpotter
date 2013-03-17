@@ -10,6 +10,7 @@
 
 @interface TPCollectionViewCell()
 
+
 @end
 
 @implementation TPCollectionViewCell

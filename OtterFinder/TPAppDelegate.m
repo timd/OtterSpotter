@@ -25,7 +25,7 @@
         mainVC = [[TPMainViewController alloc] initWithNibName:@"TPMainView~iPhone" bundle:nil];
     }
     
-    [mainVC setTitle:@"Ottr"];
+    [mainVC setTitle:@"Otter Spotter"];
 
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:mainVC];
     
